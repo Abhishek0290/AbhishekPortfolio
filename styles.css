@@ -2510,3 +2510,60 @@ body {
         height: 14px;
     }
 }
+/* Hover text container */
+.hover-info {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 3;
+}
+
+/* Name styling with glow */
+.name-glow {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 5px #3182ce, 0 0 10px #63b3ed;
+}
+
+/* Role text styling */
+.role-glow {
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 4px #2b6cb0;
+  margin-top: 4px;
+}
+
+/* Show text on hover */
+.image-container:hover .hover-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: responsive image container size */
+@media (max-width: 500px) {
+  .image-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .image-container::before {
+    width: 204px;
+    height: 204px;
+    top: -12px;
+    left: -12px;
+  }
+
+  .name-glow {
+    font-size: 1.2rem;
+  }
+
+  .role-glow {
+    font-size: 0.9rem;
+  }
+}
+
